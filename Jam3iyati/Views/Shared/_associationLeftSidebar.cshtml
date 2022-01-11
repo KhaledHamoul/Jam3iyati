@@ -1,0 +1,28 @@
+﻿@model Jam3iyati.Models.AssociationViewModel  
+<!-- Left Sidebar  -->
+<div class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="nav-devider"></li>
+                <li class="nav-label">Général</li>
+                <li> <a href="/association/index"><i class="fa fa-tachometer-alt"></i><span>Accueil </span></a></li>
+                <li> <a href="/association/notifications"><i class="fa fa-bell"></i><span>Notifications <span class="label label-rouded label-warning pull-right"> @Model.Notifications.Where(c => c.read == false).Count()</span></span></a></li>
+                <li class="nav-label">Activités</li>
+                <li> <a href="/association/demandes"><i class="fa fa-folder regular"></i><span>Mes demandes </span></a></li>
+                <li> <a href="#"><i class="fa fa-calendar"></i><span>Mes événnements</span></a></li>
+                <li class="nav-label">Autres</li>
+                <li> <a href="/association/account"><i class="fa fa-user-circle "></i><span>Mon compte </span></a></li>
+
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</div>
+<!-- End Left Sidebar  -->
+<!-- Page wrapper  -->
+<div class="page-wrapper">
+   

@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNet.Identity
+@model Jam3iyati.Models.AssociationViewModel
+
+@Html.Partial("_dashHeader")
+@Html.Partial("_associationLeftSidebar")
+
+<!-- Bread crumb -->
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-primary">Notifications</h3>
+    </div>
+</div>
+<!-- End Bread crumb -->
+
+<div class="container-fluid">
+    <!-- Start Page Content -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-content">
+                        <div class="">
+                            <div class="">
+                                <div>
+                                    <div>
+                                        <ul class="message-list">
+                                            @foreach (var item in Model.Notifications)
+                                            {
+                                                <li>  
+                                                    <div style="padding:15px" class="col-mail">
+                                                        <h5>@item.subject</h5>
+                                                    </div>
+                                                    <div class="col-mail col-mail-2">
+                                                        <div class="subject">
+                                                            <span class="teaser">@item.content</span>
+                                                        </div>
+                                                        <div class="date">@item.date.ToShortDateString()</div>
+                                                    </div>
+                                                 </li>
+                                            }
+                                          
+
+                                        
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!-- panel body -->
+                            </div>
+                            <!-- panel -->
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End PAge Content -->
+</div>
+
+@Html.Partial("_dashFooter") 

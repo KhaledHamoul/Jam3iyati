@@ -1,0 +1,250 @@
+﻿@model Jam3iyati.Models.WilayaViewModel
+
+@Html.Partial("_dashHeader")
+@Html.Partial("_wilayaLeftSidebar")
+
+<!-- Bread crumb -->
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-primary">Demandes d'associations de wilaya non traitées</h3>
+    </div>
+</div>
+<!-- End Bread crumb -->
+
+ <!-- Container fluid  -->
+<div class="container-fluid">
+    <!-- Start Page Content -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Data Export</h4>
+                    <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                    <div class="table-responsive m-t-40">
+                        <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>ID demande</th>
+                                    <th>Type</th>
+                                    <th>Temps</th>
+                                    <th>Association</th>
+                                    <th>Domaine</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                           
+                            <tbody>
+                                @foreach (var item in Model.notTreatedWilayaDemandes)
+                                {
+                                    <tr>
+                                        <td>@item.DemandeID</td>
+                                        <td>@item.Demande.type</td>
+                                        <td>@item.Demande.date</td>
+                                        <td>@item.Demande.Association.name</td>
+                                        <td>@item.Demande.Association.field</td>
+                                        <td><button onclick="dinfo(this, 'DAWWilaya')" class="btn btn-primary align-self-center fa fa-search" value="@item.Demande.DemandeID"  data-toggle="modal" data-target="#demande-info"></button></td>
+                                        <td><button onclick="dvalidate(this, 'DAWWilaya')" class="btn btn-primary align-self-center fa fa-check" value="@item.Demande.DemandeID" data-toggle="modal" data-target="#demande-validate"></button></td>
+                                        <td><button onclick="dcancel(this, 'DAWWilaya')" class="btn btn-danger align-self-center fa fa-times" value="@item.Demande.DemandeID" data-toggle="modal" data-target="#demande-cancel"></button></td>
+                                </tr>
+                                }
+
+                               
+
+
+                            </tbody>
+                        </table>
+
+                             
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End PAge Content -->
+</div>
+<!-- End Container fluid  -->
+
+
+<div class="modal fade" id="demande-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:40%;margin-top:25%" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container col-12">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:50px;margin-bottom:50px">
+                                <div class="card-body">
+                                    <div id="dinfo-card" class="basic-form">
+                                       
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="demande-validate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container col-12">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:50px;margin-bottom:50px">
+                                <div class="card-body">
+                                    <div id="dvalidate-card" class="basic-form">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="demande-cancel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container col-12">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:50px;margin-bottom:50px">
+                                <div class="card-body">
+                                    <div id="dcancel-card" class="basic-form">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+
+@Html.Partial("_dashTabFooter")
+
+
+
+ <div id="toPrint" style="display:none  ">
+     <style>
+         .radp-title {
+             font-weight: bold;
+             text-align: center;
+         }
+
+         .header-print {
+             height: 130px;
+         }
+
+         .left-side {
+             text-align: left;
+             width: 30%;
+             float: left;
+         }
+
+         .right-side {
+             text-align: right;
+             width: 40%;
+             float: right;
+         }
+
+         .sender {
+             text-align: center;
+             font-weight: bold;
+             padding: 2px;
+             margin-bottom: 40px;
+         }
+
+         .subject {
+             font-weight: bold;
+             text-align: right;
+         }
+
+         .content-print {
+             margin-top: 30px;
+             text-align: right;
+         }
+     </style>
+     <div>
+         <p class="radp-title">الجمهورية الجزائرية الديمقراطية الشعبية</p>
+         <div class="header-print">
+             <p class="left-side"> 30/09/2018:تيارت في  </p>
+             <p class="right-side">
+                 ولايــــــــــــــــة تيـــــــــــــارت <br>
+                 دائـــــــــــــــــرة تيــــــــــــارت  <br>
+                 بلديـــــــــــــــة تيــــــــــــــارت <br>
+                 رقم : ...... / م ت ع /2018
+             </p>
+         </div>
+
+         <div class="sender">
+             رئيــس المجلس الشعبي البلدي <br>
+             لبلديــــــة  تيــــــارت  <br>
+             إلى السيــد <br>
+             والــي ولايـــة تيــارت <br>
+             مديريـة التنظيــم والشـؤون العامـة<br>
+             تحت إشراف / رئيس دائرة تيارت <br>
+         </div>
+         <div class="subject">
+             الموضــــــــوع : بخصوص طلب تأسيس جمعية محلية. <br>
+             المرفقــــــــات : القانون الأساسي .<br>
+         </div>
+         <div class="content-print">
+             يشرفنـي أن أوافيكـم ــ لإبــداء رأيكـــم ــ بنسخــة مـن القـانـــون الأســاســــي الخـــاص بطلب
+             تأسيس جمعيــــة محلية  ، ذات الطابع الديني<br>
+             المسمـــــــــاة البصائر <br>
+             برئاسة السيد محمد محمد<br>
+             الكائن مقرها ببلدية تيارت ولاية تيارت<br><br>
+             ونظرا للإلتزامات الخاصة بالإجراءات المتعلقة بتسليم وصل التصريح بتأسيس أو تجديد الجمعيات في
+             مدة أقصاها 15 يوم من تاريخ إستلامكم ، أطلب  منكم موافاتي برأيكم حول هذا التأسيس وذلك ضمن الآجال
+             المحددة قانونا.
+         </div>
+
+
+     </div>
+ </div>
+
+
+
+<script>
+
+    function PrintElem(elem) {
+            elem = 'toPrint';
+            var mywindow = window.open('', 'PRINT', 'height=600,width=800');
+
+          
+            mywindow.document.write(document.getElementById(elem).innerHTML);
+
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10*/
+
+            mywindow.print();
+            //mywindow.close();
+
+            return true;
+        }
+        
+
+</script>

@@ -1,0 +1,120 @@
+﻿@model Jam3iyati.Models.WilayaViewModel
+
+@Html.Partial("_dashHeader")
+@Html.Partial("_wilayaLeftSidebar")
+
+ <!-- Bread crumb -->
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-primary">Demandes d'associations de wilaya traitées</h3>
+    </div>
+</div>
+<!-- End Bread crumb -->
+
+  <!-- Container fluid  -->
+<div class="container-fluid">
+    <!-- Start Page Content -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Data Export</h4>
+                    <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                    <div class="table-responsive m-t-40">
+                        <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>ID demande</th>
+                                    <th>Type</th>
+                                    <th>Temps</th>
+                                    <th>Association</th>
+                                    <th>Domaine</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model.treatedWilayaDemandes)
+                                {
+                                    <tr>
+                                        <td>@item.DemandeID</td>
+                                        <td>@item.Demande.type</td>
+                                        <td>@item.Demande.date</td>
+                                        <td>@item.Demande.Association.name</td>
+                                        <td>@item.Demande.Association.field</td>
+                                        <td><button onclick="dinfo(this, 'DAWNotify')" class="btn btn-primary align-self-center fa fa-search" value="@item.Demande.DemandeID" data-toggle="modal" data-target="#demande-info"></button></td>
+                                        <td><button onclick="dvalidate(this,'DAWNotify')" class="btn btn-primary align-self-center fa fa-check" value="@item.Demande.DemandeID" data-toggle="modal" data-target="#demande-validate"></button></td>
+                                  </tr>
+                                }
+
+
+
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End PAge Content -->
+</div>
+<!-- End Container fluid  -->
+
+
+<div class="modal fade" id="demande-info" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width:40%;margin-top:25%" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container col-12">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:50px;margin-bottom:50px">
+                                <div class="card-body">
+                                    <div id="dinfo-card" class="basic-form">
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="demande-validate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container col-12">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:50px;margin-bottom:50px">
+                                <div class="card-body">
+                                    <div id="dvalidate-card" class="basic-form">
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@Html.Partial("_dashTabFooter")
+

@@ -1,0 +1,151 @@
+﻿@model Jam3iyati.Models.AssociationViewModel
+
+@Html.Partial("_dashHeader","Demandes")
+@Html.Partial("_associationLeftSidebar")
+
+<!-- Bread crumb -->
+<div class="row page-titles">
+    <div class="col-md-5 align-self-center">
+        <h3 class="text-primary">Demandes</h3>
+    </div>
+</div>
+<!-- End Bread crumb -->
+
+<!-- Container fluid  -->
+<div class="container-fluid">
+    <!-- Start Page Content -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">   
+                    <button class=" org_btn btn btn-primary sweet-prompt float-right"  data-toggle="modal" data-target="#newDemande">Nouvelle demande</button>
+                    
+                    <h4 class="card-title">Data Export</h4>
+                    <h6 class="card-subtitle">Export data to Copy, CSV, Excel, PDF & Print</h6>
+                    <div class="table-responsive m-t-40">
+                        <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>ID demande</th>
+                                    <th>Date</th>
+                                    <th>Temps</th>
+                                    <th>Type</th>
+                                    <th>Etat</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>ID demande</th>
+                                    <th>Date</th>
+                                    <th>Temps</th>
+                                    <th>Type</th>
+                                    <th>Etat</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                @foreach (var item in Model.Demandes)
+                                {
+                                    <tr>
+                                        <td>@item.DemandeID</td>
+                                        <td>@item.date.ToShortDateString()</td> 
+                                        <td>@item.date.ToShortTimeString()</td> 
+                                        <td>@item.type</td>
+                                        <th>@item.result</th>
+                                    </tr>
+                                }
+                               
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End PAge Content -->
+</div>
+<!-- End Container fluid  -->
+
+
+<div class="modal fade" id="newDemande" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:50px;margin-bottom:50px">
+                                <div class="card-body">
+                                    <div class="basic-form">
+                                        <h2 class="align-self-center">Nouvelle demande</h2>
+                                        <form action="/association/demandes" method="post">
+                                            <div class="form-group">
+                                                <label>Type de la demande</label>
+                                                <select name="type" class="form-control">
+                                                    <option disabled selected>--</option>
+                                                    <option value="0">Constitution</option>
+                                                    <option value="1">Renouvellement</option>
+                                                    <option value="2">Modification</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Remarque</label>
+                                                <input type="text" class="form-control" placeholder="Remarque">
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary btn-org">Confirmer</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+   <!-- footer -->
+<footer class="footer"> © 2018 All rights reserved. Template designed by <a href="https://colorlib.com">Colorlib</a></footer>
+<!-- End footer -->
+        </div>
+<!-- End Page wrapper  -->
+    </div>
+<!-- End Wrapper -->
+<!-- All Jquery -->
+<script src="~/Assets_dashboard/js/lib/jquery/jquery.min.js"></script>
+
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="~/Assets_dashboard/js/jquery.slimscroll.js"></script>
+<!--Menu sidebar -->
+<script src="~/Assets_dashboard/js/sidebarmenu.js"></script>
+<!--stickey kit -->
+<script src="~/Assets_dashboard/js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+<!--Custom JavaScript -->
+<script src="~/Assets_dashboard/js/custom.min.js"></script>
+
+
+<script src="~/Assets_dashboard/js/lib/datatables/datatables.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/datatables/datatables-init.js"></script>
+
+<!-- Bootstrap tether Core JavaScript -->
+<script src="~/Assets_dashboard/js/lib/bootstrap/js/popper.min.js"></script>
+<script src="~/Assets_dashboard/js/lib/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

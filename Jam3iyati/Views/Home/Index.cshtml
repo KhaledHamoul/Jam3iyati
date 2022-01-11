@@ -1,0 +1,196 @@
+﻿@using Microsoft.AspNet.Identity
+@Html.Partial("_header") 
+
+<!--================Header Menu Area =================-->
+<!--================Home Banner Area =================-->
+<section class="home_banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+        <div class="container">
+            <div class="banner_content text-center">
+                <h3>Jam3iyati </h3>
+                <h4>Ta première étape pour constituer ton association</h4>
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                }
+
+                @if (Request.IsAuthenticated)
+                {
+                    <a class="org_btn" class="btn btn-primary" href="javascript:document.getElementById('logoutForm').submit()"> Se déconnecter</a>
+
+                }
+                else
+                {
+                    <a class="org_btn" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="#">Se connecter</a>
+                }
+
+                <a class="green_btn" href="Association/register">Inscrire une association</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Home Banner Area =================-->
+<!--================Offer Area =================-->
+<section class="offer_area p_120">
+    <div class="container">
+        <div class="offer_title">
+            <h3>L’association</h3><br>
+            <p>
+                <b>L’association</b> est le regroupement de personnes physiques et/ou de personnes morales sur une base contractuelle à durée déterminée ou à durée indéterminée.<br><br>
+                Ces personnes mettent en commun <b>bénévolement</b> et dans un but <b>non lucratif</b>, leurs connaissances et leurs moyens pour promouvoir et encourager les activités dans les domaines, notamment, professionnel, social, scientifique, religieux, éducatif, culturel, sportif, environnemental, caritatif et humanitaire.<br>
+            </p>
+        </div>
+
+    </div>
+</section>
+<!--================End Offer Area =================-->
+<!--================Feature Area =================-->
+<section class="feature_area p_120">
+    <div class="container">
+        <div class="main_title">
+            <h2>Comment constituer une association</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+        </div>
+        <!--
+        <div class="row feature_inner">
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature_item">
+                    <h4>Unique Design</h4>
+                    <p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature_item">
+                    <h4>Appropriate UX</h4>
+                    <p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature_item">
+                    <h4>Perfect Visual</h4>
+                    <p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature_item">
+                    <h4>Different Layout</h4>
+                    <p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="row offer_inner">
+            <div class="col-lg-4">
+                <div class="offer_item">
+                    <img class="img-fluid" src="~/Assets_web_app/img/offer/offer-1.jpg" alt="">
+                    <div class="offer_text">
+                        <h4 class="offer_text_title">Dossier</h4>
+                        <ul>
+                            <li>Une demande d’enregistrement de l’association signée par le président de l’association ou par son représentant dument habilité.</li>
+                            <li>La liste nominative mentionnant l’état civil, la profession, le domicile et la signature de l’ensembles des membres fondateurs et des instances exécutives.</li>
+                            <li>Deux exemplaires certifiés conformes des statuts.</li>
+                            <li>Le procès-verbal de l’assemblée générale constitutive établi par un huissier de justice.</li>
+                            <li>Les pièces justificatives de l’adresse du siège.	</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="offer_item">
+                    <img class="img-fluid" src="~/Assets_web_app/img/offer/offer-2.jpg" alt="">
+                    <div class="offer_text">
+                        <h4 class="offer_text_title">Fondateurs</h4>
+                        <ul>
+                            <li>Etre agé de 18 ans et plus.</li>
+                            <li>Etre de nationalité algérienne.</li>
+                            <li>Jouir de leurs droits civils et politiques.</li>
+                            <li>Ne pas avoir été condamnés pour crime et/ou délit incompatible avec le domaine d'activité de l'associationn et ,n'ayant pas été réhabilités, pour les membres dérigeants.</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="offer_item">
+                    <img class="img-fluid" src="~/Assets_web_app/img/offer/offer-3.jpg" alt="">
+                    <div class="offer_text">
+                        <h4 class="offer_text_title">Domaine</h4>
+                        <ul>
+                            <li>Professionel</li>
+                            <li>Social</li>
+                            <li>Scientifique</li>
+                            <li>Religieux</li>
+                            <li>Educatif</li>
+                            <li>Culturel</li>
+                            <li>Sportif</li>
+                            <li>Environnemental</li>
+                            <li>Caritatif</li>
+                            <li>Humanitaire</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Feature Area =================-->
+<!-- login Modal -->
+
+@using Jam3iyati.Models
+@model LoginViewModel
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="whole-wrap">
+                <div class="container">
+                    <div class="section-top-border">
+                        <div class="row">
+                            <div class="col-lg-10" style="margin:auto;margin-top:0;margin-bottom:0">
+                                <h3 class="mb-30 title_color">Se connecter</h3>
+                                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "loginForm", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="mt-4">
+                                        <input type="text" style="border-radius:100px" name="Email" placeholder="Nom utilisateur" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom utilisateur'" required class="single-input">
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                        <div class="mt-4">
+                                            <input style="border-radius:100px" type="password" name="Password" placeholder="Passeword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Passeword'" required class="single-input">
+                                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="mt-4 row">
+                                            <div class="col-lg-5 switch-wrap d-flex justify-content-between">
+                                                <p>Rester connecté</p>
+                                                <div class="confirm-checkbox" style="margin:auto">
+                                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                                    <label for="RememberMe"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="mt-10">
+                                            <input type="submit" value="Se connecter" class="genric-btn success circle arrow"></input>
+                                        </div>
+
+                                }
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    if (window.location.href.search(/error/) != -1) alert('error');
+    
+</script>
+
+
+@Html.Partial("_footer")

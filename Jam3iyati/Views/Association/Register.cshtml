@@ -1,0 +1,90 @@
+﻿@model Jam3iyati.Models.AssociationViewModel
+
+@Html.Partial("_header")
+
+<div class="whole-wrap">
+    <div class="container">
+        <div class="section-top-border">
+            <div class="row">
+                <div class="insform col-lg-7" style="margin:auto">
+                    <h3 class="mb-30 title_color">Inscrire une nouvelle association</h3>
+                    @using (Html.BeginForm("register", "Association", FormMethod.Post, new { id = "registerForm" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <h3>Informations générales</h3>
+                        <div class="mt-10">
+                            <label for="associationName">Nom de l'association</label>
+                            <input type="text" name="associationName" placeholder="Nom de l'association" onfocus="this.placeholder = ''" onblur="    this.placeholder = `Nom de l'asoociation`" required class="form-control">
+                            @Html.ValidationMessageFor(model => model.Association.name, "", new { @class = "text-danger" })
+                         </div>
+                        <div class="mt-10">
+                            <label for="field">Domaine d'activité</label>
+                            <select class="form-select"  name="field">
+                                <option selected disabled >Domaine d'activité</option>
+                                <option value="0">Culturel</option>
+                                <option value="0">Religieux</option>
+                                <option value="0">Sportif</option>
+                                <option value="0">Caritatif</option>
+                                <option value="0">Environnemental</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.Association.field, "", new { @class = "text-danger" })
+                         </div>
+                         <br /><br />
+                        <div class="mt-10">
+                            <label for="subject">Sujet</label>
+                            <input type="text" name="subject" placeholder="Sujet de l'association" onfocus="this.placeholder = ''" onblur="    this.placeholder = `Sujet de l'association`" required class="form-control">
+                            @Html.ValidationMessageFor(model => model.Association.subject, "", new { @class = "text-danger" })
+                         </div>
+                        <div class="mt-10">
+                            <label for="email">adresse email</label>
+                            <input type="email" name="email" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required class="form-control">
+                        </div>
+
+                        <div class="mt-10">
+                            <label for="wilaya">Wilaya</label>
+                            <select class="form-select" max=="10" name="wilaya" required >
+                                <option disabled>---</option>
+                                <option value="14" selected>Tiaret</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.Association.field, "", new { @class = "text-danger" })
+                        </div>
+                        <br /><br />
+
+
+                         <br /><br />
+                         <h6 for="typeAsso">Type d'association</h6>
+                         <br />
+                        <div class="switch-wrap d-flex justify-content-between">
+                            <p>Association de wilaya</p>
+                            <div class="confirm-radio2">
+                                <input name="typeAsso" type="radio" id="radio1" required value="1"/>
+                                <label for="confirm-radio"></label>
+                            </div>
+                        </div>
+                        <div class="switch-wrap d-flex justify-content-between">
+                            <p>Association communale</p>
+                            <div class="confirm-radio2">
+                                <input name="typeAsso" type="radio" id="radio2" required value="2"/>
+                                <label for="confirm-radio"></label>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="communes"></div>
+                        <div id="car"></div>
+
+                        <br /><br />
+                        <div class="mt-10">
+                            <input class="genric-btn success circle arrow" type="submit" value="S'inscrire"/>
+                        </div>
+
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@Html.Partial("_footer")
+
+

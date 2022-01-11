@@ -1,0 +1,38 @@
+﻿@model Jam3iyati.Models.DairaViewModel
+<!-- Left Sidebar  -->
+<div class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="nav-devider"></li>
+                <li class="nav-label">General</li>
+                <li> <a class="active" href="/Daira"><i class="fa fa-tachometer-alt"></i><span>Accueil </span></a></li>
+                <li class="nav-label">Demandes</li>
+                <li>
+                    <a class="has-arrow" href="#"><i class="fa fa-hand-holding-heart"></i><span>Associations locales </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="/Daira/DacNotValidated">Demandes &nbsp <i class="fa fa-times"></i> <span class="label label-rouded label-warning pull-right">@Model.notValidatedApcDemandes.Count</span>  </a></li>
+                        <li><a href="/Daira/DacValidated">Demandes &nbsp<i class="fa fa-check"></i><span class="label label-rouded label-warning pull-right">@Model.validatedApcDemandes.Count</span>   </a></li>    
+                    </ul>
+                </li>
+                <li>
+                    <a class="has-arrow" href="#"><i class="fa fa-hand-holding-heart"></i><span>Associations de wilaya </span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="/Daira/DawNotValidated">Demandes  &nbsp <i class="fa fa-times"></i> <span class="label label-rouded label-warning pull-right">@Model.notValidatedWilayaDemandes.Count</span>  </a></li>
+                        <li><a href="/Daira/DawValidated">Demandes &nbsp <i class="fa fa-check"></i> <span class="label label-rouded label-warning pull-right">@Model.validatedWilayaDemandes.Count</span> </a></li>
+                    </ul>
+                </li>
+                <li> <a class="active" href="/Daira/Archieved"><i class="fa fa-archive"></i><span>Archives </span></a></li>
+
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</div>
+<!-- End Left Sidebar  -->
+<!-- Page wrapper  -->
+<div class="page-wrapper">
+   

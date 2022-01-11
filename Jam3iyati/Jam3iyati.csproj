@@ -1,0 +1,1323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39ABEFEE-4EFB-42C0-A31A-83C534363293}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jam3iyati</RootNamespace>
+    <AssemblyName>Jam3iyati</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.7.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.7\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\ApcController.cs" />
+    <Compile Include="Controllers\AssociationController.cs" />
+    <Compile Include="Controllers\DairaController.cs" />
+    <Compile Include="Controllers\DemandeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\WilayaController.cs" />
+    <Compile Include="Enums\AdministrationType.cs" />
+    <Compile Include="Enums\DemandeState.cs" />
+    <Compile Include="Enums\DemandeType.cs" />
+    <Compile Include="Enums\NotificationSubject.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\scrapingAdminsHelper.cs" />
+    <Compile Include="Migrations\201809010012372_migration_1.cs" />
+    <Compile Include="Migrations\201809010012372_migration_1.Designer.cs">
+      <DependentUpon>201809010012372_migration_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809010119212_migration_2.cs" />
+    <Compile Include="Migrations\201809010119212_migration_2.Designer.cs">
+      <DependentUpon>201809010119212_migration_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809010130115_migration_3.cs" />
+    <Compile Include="Migrations\201809010130115_migration_3.Designer.cs">
+      <DependentUpon>201809010130115_migration_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809041529478_migration_4.cs" />
+    <Compile Include="Migrations\201809041529478_migration_4.Designer.cs">
+      <DependentUpon>201809041529478_migration_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809130734099_migration_5.cs" />
+    <Compile Include="Migrations\201809130734099_migration_5.Designer.cs">
+      <DependentUpon>201809130734099_migration_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809130808467_migration_6.cs" />
+    <Compile Include="Migrations\201809130808467_migration_6.Designer.cs">
+      <DependentUpon>201809130808467_migration_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809152316573_migration_61.cs" />
+    <Compile Include="Migrations\201809152316573_migration_61.Designer.cs">
+      <DependentUpon>201809152316573_migration_61.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809212352271_migration_8.cs" />
+    <Compile Include="Migrations\201809212352271_migration_8.Designer.cs">
+      <DependentUpon>201809212352271_migration_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809220139047_migration_9.cs" />
+    <Compile Include="Migrations\201809220139047_migration_9.Designer.cs">
+      <DependentUpon>201809220139047_migration_9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809220232599_migration_10.cs" />
+    <Compile Include="Migrations\201809220232599_migration_10.Designer.cs">
+      <DependentUpon>201809220232599_migration_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809220250415_migration_11.cs" />
+    <Compile Include="Migrations\201809220250415_migration_11.Designer.cs">
+      <DependentUpon>201809220250415_migration_11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApcViewModel.cs" />
+    <Compile Include="Models\DairaViewModel.cs" />
+    <Compile Include="Models\IAdmin.cs" />
+    <Compile Include="Models\Administration.cs" />
+    <Compile Include="Models\AdministrationDemande.cs" />
+    <Compile Include="Models\Apc.cs" />
+    <Compile Include="Models\Association.cs" />
+    <Compile Include="Models\AssociationMemeber.cs" />
+    <Compile Include="Models\AssociationViewModel.cs" />
+    <Compile Include="Models\Daira.cs" />
+    <Compile Include="Models\Demande.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Memeber.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\Wilaya.cs" />
+    <Compile Include="Models\WilayaViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets_dashboard\css\animate.css" />
+    <Content Include="Assets_dashboard\css\helper.css" />
+    <Content Include="Assets_dashboard\css\lib\amchart\export.css" />
+    <Content Include="Assets_dashboard\css\lib\barRating\barRating.css" />
+    <Content Include="Assets_dashboard\css\lib\bootstrap\bootstrap.min.css" />
+    <Content Include="Assets_dashboard\css\lib\c3\c3.min.css" />
+    <Content Include="Assets_dashboard\css\lib\calendar2\pignose.calendar.min.css" />
+    <Content Include="Assets_dashboard\css\lib\calendar2\semantic.ui.min.css" />
+    <Content Include="Assets_dashboard\css\lib\calendar\fullcalendar.css" />
+    <Content Include="Assets_dashboard\css\lib\chartist\chartist.min.css" />
+    <Content Include="Assets_dashboard\css\lib\data-table\buttons.bootstrap.min.css" />
+    <Content Include="Assets_dashboard\css\lib\data-table\buttons.dataTables.min.css" />
+    <Content Include="Assets_dashboard\css\lib\data-table\dataTables.bootstrap.min.css" />
+    <Content Include="Assets_dashboard\css\lib\datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Assets_dashboard\css\lib\dropzone\dropzone.css" />
+    <Content Include="Assets_dashboard\css\lib\html5-editor\bootstrap-wysihtml5.css" />
+    <Content Include="Assets_dashboard\css\lib\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="Assets_dashboard\css\lib\jsgrid\jsgrid.min.css" />
+    <Content Include="Assets_dashboard\css\lib\line-progress\jquery.lineProgressbar.css" />
+    <Content Include="Assets_dashboard\css\lib\lobi-panel\lobipanel.min.css" />
+    <Content Include="Assets_dashboard\css\lib\menubar\sidebar.css" />
+    <Content Include="Assets_dashboard\css\lib\metismenu\menu.css" />
+    <Content Include="Assets_dashboard\css\lib\nestable\nestable.css" />
+    <Content Include="Assets_dashboard\css\lib\owl.carousel.min.css" />
+    <Content Include="Assets_dashboard\css\lib\owl.theme.default.min.css" />
+    <Content Include="Assets_dashboard\css\lib\preloader\pace.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\ion.rangeSlider.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\ion.rangeSlider.skinHTML5.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\ion.rangeSlider.skinModern.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\ion.rangeSlider.skinNice.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\ion.rangeSlider.skinSimple.css" />
+    <Content Include="Assets_dashboard\css\lib\rangSlider\normalize.css" />
+    <Content Include="Assets_dashboard\css\lib\rickshaw-chart\rickshaw.min.css" />
+    <Content Include="Assets_dashboard\css\lib\scrollable\scrollable.min.css" />
+    <Content Include="Assets_dashboard\css\lib\select2\select2.min.css" />
+    <Content Include="Assets_dashboard\css\lib\sweetalert\sweetalert.css" />
+    <Content Include="Assets_dashboard\css\lib\toastr\toastr.min.css" />
+    <Content Include="Assets_dashboard\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="Assets_dashboard\css\spinners.css" />
+    <Content Include="Assets_dashboard\css\style.css" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flag-icon.min.css" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ad.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ae.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\af.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ag.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ai.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\al.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\am.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ao.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\aq.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ar.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\as.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\at.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\au.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\aw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ax.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\az.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ba.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bb.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bd.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\be.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bh.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bi.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bj.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bo.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bq.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\br.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bs.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bv.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\by.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\bz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ca.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cd.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ch.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ci.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ck.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\co.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cv.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cx.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cy.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\cz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\de.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\dj.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\dk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\dm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\do.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\dz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ec.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ee.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\eg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\eh.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\er.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\es.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\et.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\fi.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\fj.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\fk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\fm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\fo.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\fr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ga.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gb.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gd.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ge.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gh.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gi.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gp.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gq.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gs.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\gy.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\hk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\hm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\hn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\hr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ht.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\hu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\id.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ie.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\il.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\im.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\in.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\io.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\iq.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ir.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\is.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\it.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\je.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\jm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\jo.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\jp.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ke.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kh.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ki.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\km.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kp.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ky.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\kz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\la.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lb.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\li.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ls.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\lv.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ly.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ma.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\md.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\me.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mh.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ml.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mo.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mp.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mq.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ms.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mv.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mx.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\my.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\mz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\na.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\nc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ne.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\nf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ng.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ni.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\nl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\no.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\np.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\nr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\nu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\nz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\om.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pa.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pe.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ph.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ps.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\pw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\py.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\qa.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\re.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ro.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\rs.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ru.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\rw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sa.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sb.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sd.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\se.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sh.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\si.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sj.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\so.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ss.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\st.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sv.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sx.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sy.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\sz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\td.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\th.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tj.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tk.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tl.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\to.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tr.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tv.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tw.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\tz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ua.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ug.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\um.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\us.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\uy.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\uz.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\va.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\vc.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ve.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\vg.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\vi.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\vn.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\vu.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\wf.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ws.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\ye.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\yt.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\za.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\zm.svg" />
+    <Content Include="Assets_dashboard\icons\flag-icon-css\flags\zw.svg" />
+    <Content Include="Assets_dashboard\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Assets_dashboard\icons\font-awesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-arrows-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-elaboration-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-ecommerce-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-music-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-software-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-weather-10.svg" />
+    <Content Include="Assets_dashboard\icons\linea-icons\linea.css" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.svg" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.svg" />
+    <Content Include="Assets_dashboard\icons\themify-icons\fonts\themify9f24.svg" />
+    <Content Include="Assets_dashboard\icons\themify-icons\themify-icons.css" />
+    <Content Include="Assets_dashboard\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Assets_dashboard\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Assets_dashboard\images\1.png" />
+    <Content Include="Assets_dashboard\images\2.png" />
+    <Content Include="Assets_dashboard\images\3.jpg" />
+    <Content Include="Assets_dashboard\images\3.png" />
+    <Content Include="Assets_dashboard\images\4.jpg" />
+    <Content Include="Assets_dashboard\images\8.png" />
+    <Content Include="Assets_dashboard\images\alert\alert.png" />
+    <Content Include="Assets_dashboard\images\alert\alert2.png" />
+    <Content Include="Assets_dashboard\images\alert\alert3.png" />
+    <Content Include="Assets_dashboard\images\alert\alert4.png" />
+    <Content Include="Assets_dashboard\images\alert\alert5.png" />
+    <Content Include="Assets_dashboard\images\alert\alert6.png" />
+    <Content Include="Assets_dashboard\images\alert\alert7.png" />
+    <Content Include="Assets_dashboard\images\alert\model.png" />
+    <Content Include="Assets_dashboard\images\alert\model2.png" />
+    <Content Include="Assets_dashboard\images\alert\model3.png" />
+    <Content Include="Assets_dashboard\images\attached-files\img-1.jpg" />
+    <Content Include="Assets_dashboard\images\attached-files\img-2.jpg" />
+    <Content Include="Assets_dashboard\images\attached-files\img-3.jpg" />
+    <Content Include="Assets_dashboard\images\avatar.png" />
+    <Content Include="Assets_dashboard\images\avatar\1.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\2.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\3.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\4.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\5.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\6.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\7.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\8.jpg" />
+    <Content Include="Assets_dashboard\images\avatar\usa-flag.png" />
+    <Content Include="Assets_dashboard\images\background\error-bg.jpg" />
+    <Content Include="Assets_dashboard\images\background\login-register.jpg" />
+    <Content Include="Assets_dashboard\images\background\profile-bg.jpg" />
+    <Content Include="Assets_dashboard\images\background\socialbg.jpg" />
+    <Content Include="Assets_dashboard\images\background\user-bg.jpg" />
+    <Content Include="Assets_dashboard\images\background\user-info.jpg" />
+    <Content Include="Assets_dashboard\images\bg.jpg" />
+    <Content Include="Assets_dashboard\images\big\img1.jpg" />
+    <Content Include="Assets_dashboard\images\big\img2.jpg" />
+    <Content Include="Assets_dashboard\images\big\img3.jpg" />
+    <Content Include="Assets_dashboard\images\big\img4.jpg" />
+    <Content Include="Assets_dashboard\images\big\img5.jpg" />
+    <Content Include="Assets_dashboard\images\big\img6.jpg" />
+    <Content Include="Assets_dashboard\images\bookingSystem\1.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\2.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\3.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\4.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\5.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\6.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\7.png" />
+    <Content Include="Assets_dashboard\images\bookingSystem\8.png" />
+    <Content Include="Assets_dashboard\images\browser\chrome-logo.png" />
+    <Content Include="Assets_dashboard\images\browser\firefox-logo.png" />
+    <Content Include="Assets_dashboard\images\browser\internet-logo.png" />
+    <Content Include="Assets_dashboard\images\browser\opera-logo.png" />
+    <Content Include="Assets_dashboard\images\browser\safari-logo.png" />
+    <Content Include="Assets_dashboard\images\c1.jpg" />
+    <Content Include="Assets_dashboard\images\c2.jpg" />
+    <Content Include="Assets_dashboard\images\c3.jpg" />
+    <Content Include="Assets_dashboard\images\card\c1.jpg" />
+    <Content Include="Assets_dashboard\images\card\c2.jpg" />
+    <Content Include="Assets_dashboard\images\card\c3.jpg" />
+    <Content Include="Assets_dashboard\images\card\c4.jpg" />
+    <Content Include="Assets_dashboard\images\chat-person-add.png" />
+    <Content Include="Assets_dashboard\images\close.png" />
+    <Content Include="Assets_dashboard\images\custom-select.png" />
+    <Content Include="Assets_dashboard\images\favicon.png" />
+    <Content Include="Assets_dashboard\images\fjords.jpg" />
+    <Content Include="Assets_dashboard\images\gallery\chair.jpg" />
+    <Content Include="Assets_dashboard\images\gallery\chair2.jpg" />
+    <Content Include="Assets_dashboard\images\gallery\chair3.jpg" />
+    <Content Include="Assets_dashboard\images\gallery\chair4.jpg" />
+    <Content Include="Assets_dashboard\images\hand.jpg" />
+    <Content Include="Assets_dashboard\images\lights.jpg" />
+    <Content Include="Assets_dashboard\images\logo-text.png" />
+    <Content Include="Assets_dashboard\images\logo.png" />
+    <Content Include="Assets_dashboard\images\maximize.png" />
+    <Content Include="Assets_dashboard\images\minimize.png" />
+    <Content Include="Assets_dashboard\images\nature.jpg" />
+    <Content Include="Assets_dashboard\images\newyork.jpg" />
+    <Content Include="Assets_dashboard\images\paris.jpg" />
+    <Content Include="Assets_dashboard\images\paypal.png" />
+    <Content Include="Assets_dashboard\images\picture.png" />
+    <Content Include="Assets_dashboard\images\preview1.png" />
+    <Content Include="Assets_dashboard\images\product-2.jpg" />
+    <Content Include="Assets_dashboard\images\product.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\1.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\2.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\3.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\burger.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\download.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\image-10.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\image-8-226x223.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\image-9.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\images.jpg" />
+    <Content Include="Assets_dashboard\images\product_1\pizza2.jpg" />
+    <Content Include="Assets_dashboard\images\profile-bg.jpg" />
+    <Content Include="Assets_dashboard\images\rangeSliderimg\sprite-skin-flat.png" />
+    <Content Include="Assets_dashboard\images\rangeSliderimg\sprite-skin-modern.png" />
+    <Content Include="Assets_dashboard\images\rangeSliderimg\sprite-skin-nice.png" />
+    <Content Include="Assets_dashboard\images\rangeSliderimg\sprite-skin-simple.png" />
+    <Content Include="Assets_dashboard\images\sanfran.jpg" />
+    <Content Include="Assets_dashboard\images\scrollable\view-1-1200x800.jpg" />
+    <Content Include="Assets_dashboard\images\smile.png" />
+    <Content Include="Assets_dashboard\images\tooltip\Euclid.png" />
+    <Content Include="Assets_dashboard\images\user-1.png" />
+    <Content Include="Assets_dashboard\images\user-bg.jpg" />
+    <Content Include="Assets_dashboard\images\user-female.png" />
+    <Content Include="Assets_dashboard\images\user-profile.jpg" />
+    <Content Include="Assets_dashboard\images\user.jpg" />
+    <Content Include="Assets_dashboard\images\users\1.jpg" />
+    <Content Include="Assets_dashboard\images\users\2.jpg" />
+    <Content Include="Assets_dashboard\images\users\3.jpg" />
+    <Content Include="Assets_dashboard\images\users\4.jpg" />
+    <Content Include="Assets_dashboard\images\users\5.jpg" />
+    <Content Include="Assets_dashboard\images\users\6.jpg" />
+    <Content Include="Assets_dashboard\images\users\7.jpg" />
+    <Content Include="Assets_dashboard\images\users\8.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-1.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-2.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-3.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-4.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-5.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-6.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-7.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-8.jpg" />
+    <Content Include="Assets_dashboard\images\users\avatar-9.jpg" />
+    <Content Include="Assets_dashboard\images\users\profile.png" />
+    <Content Include="Assets_dashboard\images\video-cam.png" />
+    <Content Include="Assets_dashboard\images\watch.jpg" />
+    <Content Include="Assets_dashboard\js\custom.min.js" />
+    <Content Include="Assets_dashboard\js\demandesModals.js" />
+    <Content Include="Assets_dashboard\js\jquery.slimscroll.js" />
+    <Content Include="Assets_dashboard\js\lib\barRating\barRating.init.js" />
+    <Content Include="Assets_dashboard\js\lib\barRating\jquery.barrating.js" />
+    <Content Include="Assets_dashboard\js\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets_dashboard\js\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets_dashboard\js\lib\bootstrap\js\popper.min.js" />
+    <Content Include="Assets_dashboard\js\lib\c3\c3-init.js" />
+    <Content Include="Assets_dashboard\js\lib\c3\c3.min.js" />
+    <Content Include="Assets_dashboard\js\lib\c3\d3.min.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar-2\moment.latest.min.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar-2\pignose.calendar.min.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar-2\pignose.init.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar-2\prism.min.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar-2\semantic.ui.min.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar\fullcalendar-init.js" />
+    <Content Include="Assets_dashboard\js\lib\calendar\fullcalendar.min.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\amchart-init.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\amcharts.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\ammap.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\amstock.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\export.min.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\light.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\pie.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\serial.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-amchart\worldLow.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-js\Chart.bundle.js" />
+    <Content Include="Assets_dashboard\js\lib\chart-js\chartjs-init.js" />
+    <Content Include="Assets_dashboard\js\lib\chartist\chartist-init.js" />
+    <Content Include="Assets_dashboard\js\lib\chartist\chartist-plugin-tooltip.min.js" />
+    <Content Include="Assets_dashboard\js\lib\chartist\chartist.min.js" />
+    <Content Include="Assets_dashboard\js\lib\chat-widget\chat-widget-init.js" />
+    <Content Include="Assets_dashboard\js\lib\circle-progress\circle-progress-init.js" />
+    <Content Include="Assets_dashboard\js\lib\circle-progress\circle-progress.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datamap\d3.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datamap\datamap-init.js" />
+    <Content Include="Assets_dashboard\js\lib\datamap\datamaps.world.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datamap\topojson.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\buttons.flash.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\buttons.html5.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\buttons.print.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.datatables.net\buttons\1.2.2\js\dataTables.buttons.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.rawgit.com\bpampuch\pdfmake\0.1.18\build\pdfmake.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.rawgit.com\bpampuch\pdfmake\0.1.18\build\vfs_fonts.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdn.rawgit.com\google\code-prettify\master\loader\run_prettify2102.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdnjs.cloudflare.com\ajax\libs\jqueryui-touch-punch\0.2.3\jquery.ui.touch-punch.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\cdnjs.cloudflare.com\ajax\libs\jszip\2.5.0\jszip.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\datatables-init.js" />
+    <Content Include="Assets_dashboard\js\lib\datatables\datatables.min.js" />
+    <Content Include="Assets_dashboard\js\lib\datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Assets_dashboard\js\lib\dropzone\dropzone.js" />
+    <Content Include="Assets_dashboard\js\lib\easing\jquery.easing.min.js" />
+    <Content Include="Assets_dashboard\js\lib\easing\stepup-form-init.js" />
+    <Content Include="Assets_dashboard\js\lib\echart\dashboard1-init.js" />
+    <Content Include="Assets_dashboard\js\lib\echart\echarts-init.js" />
+    <Content Include="Assets_dashboard\js\lib\echart\echarts.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\curvedLines.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\excanvas.min.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\flot-chart-init.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\flot-tooltip\jquery.flot.tooltip.min.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.categories.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.crosshair.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.pie.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.resize.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.stack.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.threshold.js" />
+    <Content Include="Assets_dashboard\js\lib\flot-chart\jquery.flot.time.js" />
+    <Content Include="Assets_dashboard\js\lib\form-validation\jquery.validate-init.js" />
+    <Content Include="Assets_dashboard\js\lib\form-validation\jquery.validate.min.js" />
+    <Content Include="Assets_dashboard\js\lib\form-validation\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets_dashboard\js\lib\form-validation\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets_dashboard\js\lib\gmap\gmap.init.js" />
+    <Content Include="Assets_dashboard\js\lib\gmap\gmapApi.js" />
+    <Content Include="Assets_dashboard\js\lib\gmap\gmaps.js" />
+    <Content Include="Assets_dashboard\js\lib\google-chart\google-charts.init.js" />
+    <Content Include="Assets_dashboard\js\lib\google-chart\google-jsapi.js" />
+    <Content Include="Assets_dashboard\js\lib\granim\granim-init.js" />
+    <Content Include="Assets_dashboard\js\lib\granim\granim.min.js" />
+    <Content Include="Assets_dashboard\js\lib\highchart\highcharts-init.js" />
+    <Content Include="Assets_dashboard\js\lib\highchart\highcharts-modules-exporting.js" />
+    <Content Include="Assets_dashboard\js\lib\highchart\highcharts-more.js" />
+    <Content Include="Assets_dashboard\js\lib\highchart\highcharts.js" />
+    <Content Include="Assets_dashboard\js\lib\html5-editor\bootstrap-wysihtml5.js" />
+    <Content Include="Assets_dashboard\js\lib\html5-editor\wysihtml5-0.3.0.js" />
+    <Content Include="Assets_dashboard\js\lib\html5-editor\wysihtml5-init.js" />
+    <Content Include="Assets_dashboard\js\lib\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Assets_dashboard\js\lib\jquery-ui\jquery.ui.touch-punch.min.js" />
+    <Content Include="Assets_dashboard\js\lib\jquery.nicescroll\jquery.nicescroll.js" />
+    <Content Include="Assets_dashboard\js\lib\jquery.nicescroll\jquery.nicescroll.min.js" />
+    <Content Include="Assets_dashboard\js\lib\jquery\jquery.min.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\db.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\fields\jsgrid.field.checkbox.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\fields\jsgrid.field.control.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\fields\jsgrid.field.number.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\fields\jsgrid.field.select.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\fields\jsgrid.field.text.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\fields\jsgrid.field.textarea.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid-init.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid.core.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid.field.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid.load-indicator.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid.load-strategies.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid.sort-strategies.js" />
+    <Content Include="Assets_dashboard\js\lib\jsgrid\jsgrid.validation.js" />
+    <Content Include="Assets_dashboard\js\lib\justgage\justgage.init.js" />
+    <Content Include="Assets_dashboard\js\lib\justgage\justgage.js" />
+    <Content Include="Assets_dashboard\js\lib\justgage\raphael-min.js" />
+    <Content Include="Assets_dashboard\js\lib\knob\jquery.knob.min.js" />
+    <Content Include="Assets_dashboard\js\lib\knob\knob.init.js" />
+    <Content Include="Assets_dashboard\js\lib\line-progress\jquery.lineProgressbar.js" />
+    <Content Include="Assets_dashboard\js\lib\line-progress\line-progress-init.js" />
+    <Content Include="Assets_dashboard\js\lib\menubar\sidebar.js" />
+    <Content Include="Assets_dashboard\js\lib\metismenu\jquery.slimscroll.js" />
+    <Content Include="Assets_dashboard\js\lib\metismenu\metismenu.init.js" />
+    <Content Include="Assets_dashboard\js\lib\metismenu\metismenu.min.js" />
+    <Content Include="Assets_dashboard\js\lib\moment\moment.js" />
+    <Content Include="Assets_dashboard\js\lib\morris-chart\dashboard1-init.js" />
+    <Content Include="Assets_dashboard\js\lib\morris-chart\morris-init.js" />
+    <Content Include="Assets_dashboard\js\lib\morris-chart\morris.js" />
+    <Content Include="Assets_dashboard\js\lib\morris-chart\raphael-min.js" />
+    <Content Include="Assets_dashboard\js\lib\nestable\jquery.nestable.js" />
+    <Content Include="Assets_dashboard\js\lib\nestable\nestable.init.js" />
+    <Content Include="Assets_dashboard\js\lib\owl-carousel\owl.carousel-init.js" />
+    <Content Include="Assets_dashboard\js\lib\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Assets_dashboard\js\lib\peitychart\jquery.peity.min.js" />
+    <Content Include="Assets_dashboard\js\lib\peitychart\peitychart.init.js" />
+    <Content Include="Assets_dashboard\js\lib\portlets\portlets-init.js" />
+    <Content Include="Assets_dashboard\js\lib\portlets\portlets.js" />
+    <Content Include="Assets_dashboard\js\lib\preloader\pace.min.js" />
+    <Content Include="Assets_dashboard\js\lib\rangeSlider\ion.rangeSlider.min.js" />
+    <Content Include="Assets_dashboard\js\lib\rangeSlider\moment-with-locales.js" />
+    <Content Include="Assets_dashboard\js\lib\rangeSlider\moment.js" />
+    <Content Include="Assets_dashboard\js\lib\rangeSlider\rangeslider.init.js" />
+    <Content Include="Assets_dashboard\js\lib\rating1\jRate.init.js" />
+    <Content Include="Assets_dashboard\js\lib\rating1\jRate.min.js" />
+    <Content Include="Assets_dashboard\js\lib\rickshaw\d3.layout.min.js" />
+    <Content Include="Assets_dashboard\js\lib\rickshaw\d3.min.js" />
+    <Content Include="Assets_dashboard\js\lib\rickshaw\rickshaw-init.js" />
+    <Content Include="Assets_dashboard\js\lib\rickshaw\rickshaw.min.js" />
+    <Content Include="Assets_dashboard\js\lib\scrollable\holder.js" />
+    <Content Include="Assets_dashboard\js\lib\scrollable\jquery-asScrollable.min.js" />
+    <Content Include="Assets_dashboard\js\lib\scrollable\jquery-asScrollbar.js" />
+    <Content Include="Assets_dashboard\js\lib\scrollable\scrollable.init.js" />
+    <Content Include="Assets_dashboard\js\lib\select2\select2.full.min.js" />
+    <Content Include="Assets_dashboard\js\lib\sparklinechart\jquery.sparkline.min.js" />
+    <Content Include="Assets_dashboard\js\lib\sparklinechart\sparkline.init.js" />
+    <Content Include="Assets_dashboard\js\lib\sticky-kit-master\dist\sticky-kit.min.js" />
+    <Content Include="Assets_dashboard\js\lib\sweetalert\sweetalert.init.js" />
+    <Content Include="Assets_dashboard\js\lib\sweetalert\sweetalert.min.js" />
+    <Content Include="Assets_dashboard\js\lib\toastr\toastr.init.js" />
+    <Content Include="Assets_dashboard\js\lib\toastr\toastr.min.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.algeria.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.argentina.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.brazil.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.europe.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.france.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.germany.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.greece.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.iran.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.iraq.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.russia.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.tunisia.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.turkey.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.usa.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\country\jquery.vmap.world.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\jquery.vmap.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\jquery.vmap.min.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\jquery.vmap.sampledata.js" />
+    <Content Include="Assets_dashboard\js\lib\vector-map\vector.init.js" />
+    <Content Include="Assets_dashboard\js\lib\weather\jquery.simpleWeather.min.js" />
+    <Content Include="Assets_dashboard\js\lib\weather\weather-init.js" />
+    <Content Include="Assets_dashboard\js\scripts.js" />
+    <Content Include="Assets_dashboard\js\sidebarmenu.js" />
+    <Content Include="Assets_web_app\css\bootstrap.css" />
+    <Content Include="Assets_web_app\css\bootstrap2.css" />
+    <Content Include="Assets_web_app\css\breadcrumb.css" />
+    <Content Include="Assets_web_app\css\font-awesome.min.css" />
+    <Content Include="Assets_web_app\css\responsive.css" />
+    <Content Include="Assets_web_app\css\style.css" />
+    <Content Include="Assets_web_app\css\_about.css" />
+    <Content Include="Assets_web_app\css\_feature.css" />
+    <Content Include="Assets_web_app\css\_gallery.css" />
+    <Content Include="Assets_web_app\css\_team.css" />
+    <Content Include="Assets_web_app\css\_variables.css" />
+    <Content Include="Assets_web_app\js\communes.js" />
+    <Content Include="Assets_web_app\js\members.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Assets_web_app\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets_web_app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Assets_web_app\img\about-img.jpg" />
+    <Content Include="Assets_web_app\img\banner\banner-2.jpg" />
+    <Content Include="Assets_web_app\img\banner\banner.jpg" />
+    <Content Include="Assets_web_app\img\banner\home-banner.jpg" />
+    <Content Include="Assets_web_app\img\blog\add.jpg" />
+    <Content Include="Assets_web_app\img\blog\author.png" />
+    <Content Include="Assets_web_app\img\blog\c1.jpg" />
+    <Content Include="Assets_web_app\img\blog\c2.jpg" />
+    <Content Include="Assets_web_app\img\blog\c3.jpg" />
+    <Content Include="Assets_web_app\img\blog\c4.jpg" />
+    <Content Include="Assets_web_app\img\blog\c5.jpg" />
+    <Content Include="Assets_web_app\img\blog\c6.jpg" />
+    <Content Include="Assets_web_app\img\blog\cat-post\cat-post-1.jpg" />
+    <Content Include="Assets_web_app\img\blog\cat-post\cat-post-2.jpg" />
+    <Content Include="Assets_web_app\img\blog\cat-post\cat-post-3.jpg" />
+    <Content Include="Assets_web_app\img\blog\causes\causes-1.jpg" />
+    <Content Include="Assets_web_app\img\blog\causes\causes-2.jpg" />
+    <Content Include="Assets_web_app\img\blog\causes\causes-3.jpg" />
+    <Content Include="Assets_web_app\img\blog\feature-img1.jpg" />
+    <Content Include="Assets_web_app\img\blog\latest-post\l-post-1.jpg" />
+    <Content Include="Assets_web_app\img\blog\latest-post\l-post-2.jpg" />
+    <Content Include="Assets_web_app\img\blog\latest-post\l-post-3.jpg" />
+    <Content Include="Assets_web_app\img\blog\latest-post\l-post-4.jpg" />
+    <Content Include="Assets_web_app\img\blog\main-blog\m-blog-1.jpg" />
+    <Content Include="Assets_web_app\img\blog\main-blog\m-blog-2.jpg" />
+    <Content Include="Assets_web_app\img\blog\main-blog\m-blog-3.jpg" />
+    <Content Include="Assets_web_app\img\blog\main-blog\m-blog-4.jpg" />
+    <Content Include="Assets_web_app\img\blog\main-blog\m-blog-5.jpg" />
+    <Content Include="Assets_web_app\img\blog\next.jpg" />
+    <Content Include="Assets_web_app\img\blog\popular-post\post1.jpg" />
+    <Content Include="Assets_web_app\img\blog\popular-post\post2.jpg" />
+    <Content Include="Assets_web_app\img\blog\popular-post\post3.jpg" />
+    <Content Include="Assets_web_app\img\blog\popular-post\post4.jpg" />
+    <Content Include="Assets_web_app\img\blog\post-img1.jpg" />
+    <Content Include="Assets_web_app\img\blog\post-img2.jpg" />
+    <Content Include="Assets_web_app\img\blog\prev.jpg" />
+    <Content Include="Assets_web_app\img\elements\a.jpg" />
+    <Content Include="Assets_web_app\img\elements\a2.jpg" />
+    <Content Include="Assets_web_app\img\elements\d.jpg" />
+    <Content Include="Assets_web_app\img\elements\disabled-check.png" />
+    <Content Include="Assets_web_app\img\elements\disabled-radio.png" />
+    <Content Include="Assets_web_app\img\elements\f1.jpg" />
+    <Content Include="Assets_web_app\img\elements\f2.jpg" />
+    <Content Include="Assets_web_app\img\elements\f3.jpg" />
+    <Content Include="Assets_web_app\img\elements\f4.jpg" />
+    <Content Include="Assets_web_app\img\elements\f5.jpg" />
+    <Content Include="Assets_web_app\img\elements\f6.jpg" />
+    <Content Include="Assets_web_app\img\elements\f7.jpg" />
+    <Content Include="Assets_web_app\img\elements\f8.jpg" />
+    <Content Include="Assets_web_app\img\elements\g1.jpg" />
+    <Content Include="Assets_web_app\img\elements\g2.jpg" />
+    <Content Include="Assets_web_app\img\elements\g3.jpg" />
+    <Content Include="Assets_web_app\img\elements\g4.jpg" />
+    <Content Include="Assets_web_app\img\elements\g5.jpg" />
+    <Content Include="Assets_web_app\img\elements\g6.jpg" />
+    <Content Include="Assets_web_app\img\elements\g7.jpg" />
+    <Content Include="Assets_web_app\img\elements\g8.jpg" />
+    <Content Include="Assets_web_app\img\elements\primary-check.png" />
+    <Content Include="Assets_web_app\img\elements\primary-radio.png" />
+    <Content Include="Assets_web_app\img\elements\success-check.png" />
+    <Content Include="Assets_web_app\img\elements\success-radio.png" />
+    <Content Include="Assets_web_app\img\elements\user1.png" />
+    <Content Include="Assets_web_app\img\elements\user2.png" />
+    <Content Include="Assets_web_app\img\favicon.png" />
+    <Content Include="Assets_web_app\img\gallery\icon.png" />
+    <Content Include="Assets_web_app\img\gallery\portfolio_details.jpg" />
+    <Content Include="Assets_web_app\img\gallery\project-1.jpg" />
+    <Content Include="Assets_web_app\img\gallery\project-2.jpg" />
+    <Content Include="Assets_web_app\img\gallery\project-3.jpg" />
+    <Content Include="Assets_web_app\img\gallery\project-4.jpg" />
+    <Content Include="Assets_web_app\img\gallery\project-5.jpg" />
+    <Content Include="Assets_web_app\img\gallery\project-6.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-01.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-02.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-03.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-04.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-05.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-06.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-07.jpg" />
+    <Content Include="Assets_web_app\img\instagram\Image-08.jpg" />
+    <Content Include="Assets_web_app\img\left-img.jpg" />
+    <Content Include="Assets_web_app\img\logo.png" />
+    <Content Include="Assets_web_app\img\offer\offer-1.jpg" />
+    <Content Include="Assets_web_app\img\offer\offer-2.jpg" />
+    <Content Include="Assets_web_app\img\offer\offer-3.jpg" />
+    <Content Include="Assets_web_app\img\team\team-1.jpg" />
+    <Content Include="Assets_web_app\img\team\team-2.jpg" />
+    <Content Include="Assets_web_app\img\team\team-3.jpg" />
+    <Content Include="Assets_web_app\img\team\team-4.jpg" />
+    <Content Include="Assets_web_app\js\bootstrap.min.js" />
+    <Content Include="Assets_web_app\js\contact.js" />
+    <Content Include="Assets_web_app\js\custom.js" />
+    <Content Include="Assets_web_app\js\gmaps.min.js" />
+    <Content Include="Assets_web_app\js\jquery-3.2.1.min.js" />
+    <Content Include="Assets_web_app\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Assets_web_app\js\jquery.form.js" />
+    <Content Include="Assets_web_app\js\jquery.validate.min.js" />
+    <Content Include="Assets_web_app\js\mail-script.js" />
+    <Content Include="Assets_web_app\js\popper.js" />
+    <Content Include="Assets_web_app\js\stellar.js" />
+    <Content Include="Assets_web_app\js\theme.js" />
+    <Content Include="Assets_web_app\vendors\animate-css\animate.css" />
+    <Content Include="Assets_web_app\vendors\animate-css\wow.min.js" />
+    <Content Include="Assets_web_app\vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.css" />
+    <Content Include="Assets_web_app\vendors\bootstrap-datepicker\bootstrap-datetimepicker.min.js" />
+    <Content Include="Assets_web_app\vendors\bootstrap-datepicker\bootstrap-select.css" />
+    <Content Include="Assets_web_app\vendors\bootstrap-datepicker\bootstrap-select.js" />
+    <Content Include="Assets_web_app\vendors\counter-up\jquery.counterup.js" />
+    <Content Include="Assets_web_app\vendors\counter-up\jquery.waypoints.min.js" />
+    <Content Include="Assets_web_app\vendors\isotope\imagesloaded.pkgd.min.js" />
+    <Content Include="Assets_web_app\vendors\isotope\isotope-min.js" />
+    <Content Include="Assets_web_app\vendors\jquery-ui\jquery-ui.css" />
+    <Content Include="Assets_web_app\vendors\jquery-ui\jquery-ui.js" />
+    <Content Include="Assets_web_app\vendors\lightbox\simpleLightbox.css" />
+    <Content Include="Assets_web_app\vendors\lightbox\simpleLightbox.min.js" />
+    <Content Include="Assets_web_app\vendors\linericon\fonts\Linearicons-Free.svg" />
+    <Content Include="Assets_web_app\vendors\linericon\style.css" />
+    <Content Include="Assets_web_app\vendors\nice-select\css\nice-select.css" />
+    <Content Include="Assets_web_app\vendors\nice-select\css\style.css" />
+    <Content Include="Assets_web_app\vendors\nice-select\js\jquery.nice-select.js" />
+    <Content Include="Assets_web_app\vendors\nice-select\js\jquery.nice-select.min.js" />
+    <Content Include="Assets_web_app\vendors\owl-carousel\assets\ajax-loader.gif" />
+    <Content Include="Assets_web_app\vendors\owl-carousel\assets\animated.css" />
+    <Content Include="Assets_web_app\vendors\owl-carousel\assets\owl.carousel.css" />
+    <Content Include="Assets_web_app\vendors\owl-carousel\owl.carousel.min.css" />
+    <Content Include="Assets_web_app\vendors\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets_web_app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets_web_app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets_web_app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="Assets_web_app\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets_web_app\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets_web_app\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets_web_app\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets_web_app\fonts\FontAwesome.otf" />
+    <Content Include="Assets_web_app\css\breadcrumb.css.map" />
+    <Content Include="Assets_web_app\css\style.css.map" />
+    <Content Include="Assets_web_app\css\_about.css.map" />
+    <Content Include="Assets_web_app\css\_feature.css.map" />
+    <Content Include="Assets_web_app\css\_gallery.css.map" />
+    <Content Include="Assets_web_app\css\_team.css.map" />
+    <Content Include="Assets_web_app\css\_variables.css.map" />
+    <Content Include="Assets_web_app\img\elements\_DS_Store" />
+    <Content Include="Assets_dashboard\css\less\advance-widget.less" />
+    <Content Include="Assets_dashboard\css\less\amchart.less" />
+    <Content Include="Assets_dashboard\css\less\badge.less" />
+    <Content Include="Assets_dashboard\css\less\booking-system.less" />
+    <Content Include="Assets_dashboard\css\less\breadcrumb.less" />
+    <Content Include="Assets_dashboard\css\less\button.less" />
+    <Content Include="Assets_dashboard\css\less\calendar.less" />
+    <Content Include="Assets_dashboard\css\less\card.less" />
+    <Content Include="Assets_dashboard\css\less\carousel.less" />
+    <Content Include="Assets_dashboard\css\less\chart.less" />
+    <Content Include="Assets_dashboard\css\less\chartist.less" />
+    <Content Include="Assets_dashboard\css\less\chat.less" />
+    <Content Include="Assets_dashboard\css\less\compose-email.less" />
+    <Content Include="Assets_dashboard\css\less\data-table.less" />
+    <Content Include="Assets_dashboard\css\less\datamap.less" />
+    <Content Include="Assets_dashboard\css\less\error.less" />
+    <Content Include="Assets_dashboard\css\less\favourite_menu.less" />
+    <Content Include="Assets_dashboard\css\less\flot-chart.less" />
+    <Content Include="Assets_dashboard\css\less\font.less" />
+    <Content Include="Assets_dashboard\css\less\fonts.less" />
+    <Content Include="Assets_dashboard\css\less\footer.less" />
+    <Content Include="Assets_dashboard\css\less\form-validation.less" />
+    <Content Include="Assets_dashboard\css\less\forms.less" />
+    <Content Include="Assets_dashboard\css\less\global.less" />
+    <Content Include="Assets_dashboard\css\less\gmap.less" />
+    <Content Include="Assets_dashboard\css\less\header.less" />
+    <Content Include="Assets_dashboard\css\less\invoice-edit.less" />
+    <Content Include="Assets_dashboard\css\less\invoice.less" />
+    <Content Include="Assets_dashboard\css\less\knob.less" />
+    <Content Include="Assets_dashboard\css\less\login.less" />
+    <Content Include="Assets_dashboard\css\less\menu-upload.less" />
+    <Content Include="Assets_dashboard\css\less\mixins.less" />
+    <Content Include="Assets_dashboard\css\less\modal.less" />
+    <Content Include="Assets_dashboard\css\less\morris-chart.less" />
+    <Content Include="Assets_dashboard\css\less\nestable.less" />
+    <Content Include="Assets_dashboard\css\less\order-list.less" />
+    <Content Include="Assets_dashboard\css\less\order-progress.less" />
+    <Content Include="Assets_dashboard\css\less\pagination.less" />
+    <Content Include="Assets_dashboard\css\less\panel.less" />
+    <Content Include="Assets_dashboard\css\less\preloader.less" />
+    <Content Include="Assets_dashboard\css\less\products_1.less" />
+    <Content Include="Assets_dashboard\css\less\products_2.less" />
+    <Content Include="Assets_dashboard\css\less\products_3.less" />
+    <Content Include="Assets_dashboard\css\less\profile-widget.less" />
+    <Content Include="Assets_dashboard\css\less\profile.less" />
+    <Content Include="Assets_dashboard\css\less\progress-bar.less" />
+    <Content Include="Assets_dashboard\css\less\recent-comments.less" />
+    <Content Include="Assets_dashboard\css\less\recent-message.less" />
+    <Content Include="Assets_dashboard\css\less\responsive.less" />
+    <Content Include="Assets_dashboard\css\less\scrollable.less" />
+    <Content Include="Assets_dashboard\css\less\search.less" />
+    <Content Include="Assets_dashboard\css\less\sidebar.less" />
+    <Content Include="Assets_dashboard\css\less\social-media-stats.less" />
+    <Content Include="Assets_dashboard\css\less\style.less" />
+    <Content Include="Assets_dashboard\css\less\tab.less" />
+    <Content Include="Assets_dashboard\css\less\table-export.less" />
+    <Content Include="Assets_dashboard\css\less\table.less" />
+    <Content Include="Assets_dashboard\css\less\timeline.less" />
+    <Content Include="Assets_dashboard\css\less\todo-list.less" />
+    <Content Include="Assets_dashboard\css\less\ui-block-quote.less" />
+    <Content Include="Assets_dashboard\css\less\ui-element-basic.less" />
+    <Content Include="Assets_dashboard\css\less\ui-user-card.less" />
+    <Content Include="Assets_dashboard\css\less\variable.less" />
+    <Content Include="Assets_dashboard\css\less\vector-map.less" />
+    <Content Include="Assets_dashboard\css\less\vertical-carousel.less" />
+    <Content Include="Assets_dashboard\css\less\weather.less" />
+    <Content Include="Assets_dashboard\css\less\widget-stat.less" />
+    <Content Include="Assets_dashboard\icons\font-awesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="Assets_dashboard\icons\font-awesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="Assets_dashboard\icons\font-awesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="Assets_dashboard\icons\font-awesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="Assets_dashboard\icons\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-arrows-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-arrows-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-arrows-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-arrows-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-elaboration-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-elaboration-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-basic-elaboration-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-ecommerce-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-ecommerce-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-ecommerce-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-ecommerce-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-music-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-music-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-music-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-music-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-software-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-software-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-software-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-software-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-weather-10.eot" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-weather-10.ttf" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-weather-10.woff" />
+    <Content Include="Assets_dashboard\icons\linea-icons\fonts\linea-weather-10d41d.eot" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.eot" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.ttf" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff" />
+    <Content Include="Assets_dashboard\icons\material-design-iconic-font\fonts\materialdesignicons-webfontdc99.woff2" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.eot" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.ttf" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.woff" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\fonts\Simple-Line-Icons4c82.woff2" />
+    <Content Include="Assets_dashboard\icons\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="Assets_dashboard\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Assets_dashboard\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Assets_dashboard\icons\themify-icons\fonts\themify9f24.eot" />
+    <Content Include="Assets_dashboard\icons\themify-icons\fonts\themifyd41d.eot" />
+    <Content Include="Assets_dashboard\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Assets_dashboard\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Assets_dashboard\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Assets_dashboard\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Assets_web_app\vendors\linericon\fonts\Linearicons-Free.eot" />
+    <Content Include="Assets_web_app\vendors\linericon\fonts\Linearicons-Free.ttf" />
+    <Content Include="Assets_web_app\vendors\linericon\fonts\Linearicons-Free.woff" />
+    <Content Include="Assets_web_app\vendors\linericon\fonts\Linearicons-Free.woff2" />
+    <Content Include="Assets_web_app\scss\breadcrumb.scss" />
+    <Content Include="Assets_web_app\scss\style.scss" />
+    <Content Include="Assets_web_app\scss\_about.scss" />
+    <Content Include="Assets_web_app\scss\_blog.scss" />
+    <Content Include="Assets_web_app\scss\_button.scss" />
+    <Content Include="Assets_web_app\scss\_contact.scss" />
+    <Content Include="Assets_web_app\scss\_elements.scss" />
+    <Content Include="Assets_web_app\scss\_feature.scss" />
+    <Content Include="Assets_web_app\scss\_footer.scss" />
+    <Content Include="Assets_web_app\scss\_gallery.scss" />
+    <Content Include="Assets_web_app\scss\_header.scss" />
+    <Content Include="Assets_web_app\scss\_predefine.scss" />
+    <Content Include="Assets_web_app\scss\_team.scss" />
+    <Content Include="Assets_web_app\scss\_variables.scss" />
+    <Content Include="Views\Shared\_header.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml" />
+    <Content Include="Views\Association\Index.cshtml" />
+    <Content Include="Views\Association\Register.cshtml" />
+    <Content Include="Views\Association\Demandes.cshtml" />
+    <Content Include="Views\Shared\_dashHeader.cshtml" />
+    <Content Include="Views\Shared\_dashFooter.cshtml" />
+    <Content Include="Views\Association\Account.cshtml" />
+    <Content Include="Views\Admins\login.cshtml" />
+    <Content Include="Views\Apc\Index.cshtml" />
+    <Content Include="Views\Wilaya\Index.cshtml" />
+    <Content Include="Views\Shared\_associationLeftSidebar.cshtml" />
+    <Content Include="Views\Shared\_apcLeftSidebar.cshtml" />
+    <Content Include="Views\Shared\_dairaLeftSidebar.cshtml" />
+    <Content Include="Views\Shared\_wilayaLeftSidebar.cshtml" />
+    <Content Include="Views\Apc\DacNotTreated.cshtml" />
+    <Content Include="Views\Apc\DacTreated.cshtml" />
+    <Content Include="Views\Apc\DawNotValidated.cshtml" />
+    <Content Include="Views\Apc\DawValidated.cshtml" />
+    <Content Include="Views\Shared\_dashTabFooter.cshtml" />
+    <Content Include="Views\Wilaya\DawNotTreated.cshtml" />
+    <Content Include="Views\Daira\Index.cshtml" />
+    <Content Include="Views\Daira\DawNotValidated.cshtml" />
+    <Content Include="Views\Daira\DacValidated.cshtml" />
+    <Content Include="Views\Daira\DacNotValidated.cshtml" />
+    <Content Include="Views\Daira\DawValidated.cshtml" />
+    <Content Include="Views\Apc\Archieved.cshtml" />
+    <Content Include="Views\Association\Notifications.cshtml" />
+    <Content Include="Views\Wilaya\Archieved.cshtml" />
+    <Content Include="Views\Daira\Archieved.cshtml" />
+    <None Include="Views\Wilaya\DawTreated.cshtml" />
+    <Content Include="Views\Wilaya\DacNotValidated.cshtml" />
+    <Content Include="Views\Wilaya\DacValidated.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809010012372_migration_1.resx">
+      <DependentUpon>201809010012372_migration_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809010119212_migration_2.resx">
+      <DependentUpon>201809010119212_migration_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809010130115_migration_3.resx">
+      <DependentUpon>201809010130115_migration_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809041529478_migration_4.resx">
+      <DependentUpon>201809041529478_migration_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809130734099_migration_5.resx">
+      <DependentUpon>201809130734099_migration_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809130808467_migration_6.resx">
+      <DependentUpon>201809130808467_migration_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809152316573_migration_61.resx">
+      <DependentUpon>201809152316573_migration_61.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809212352271_migration_8.resx">
+      <DependentUpon>201809212352271_migration_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809220139047_migration_9.resx">
+      <DependentUpon>201809220139047_migration_9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809220232599_migration_10.resx">
+      <DependentUpon>201809220232599_migration_10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809220250415_migration_11.resx">
+      <DependentUpon>201809220250415_migration_11.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14481</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14481/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,42 @@
+﻿@Html.Partial("_header")
+
+
+<div class="whole-wrap">
+    <div class="container">
+        <div class="section-top-border">
+            <div class="row">
+                <div class="col-lg-5" style="margin:auto;margin-top:100px;margin-bottom:100px">
+                    <h3 class="mb-30 title_color">Se connecter</h3>
+                    <form action="/admins/login" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="mt-4">
+                            <input type="text" style="border-radius:100px" name="email" placeholder="Nom utilisateur" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom utilisateur'" required class="single-input">
+                        </div>
+                        <div class="mt-4">
+                            <input style="border-radius:100px" value="Admin.1" type="password" name="password" placeholder="Passeword" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Passeword'" required class="single-input">
+                        </div>
+                        <div class="mt-4 row">
+                            <div class="col-lg-5 switch-wrap d-flex justify-content-between">
+                                <p>Rester connecté</p>
+                                <div class="confirm-checkbox" style="margin:auto">
+                                    <input type="checkbox"  name="rememberme" id="confirm-checkbox">
+                                    <label for="confirm-checkbox"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="mt-10">
+                            <input type="submit" value="Se connecter" class="genric-btn success circle arrow"/>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@Html.Partial("_footer")
